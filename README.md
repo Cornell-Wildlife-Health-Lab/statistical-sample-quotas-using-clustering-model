@@ -1,0 +1,1 @@
+This SOP4CWD repository contains the scripts used to run the Statistical Sample Quotas Using Clustering Model in the CWD Data Warehouse. Scripts are annotated and shared with an MIT license. For information about the SOP4CWD project, visit https://sop4cwd.org/.
