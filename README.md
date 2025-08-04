@@ -1,1 +1,3 @@
 This SOP4CWD repository contains the scripts used to run the Statistical Sample Quotas Using Clustering Model in the CWD Data Warehouse. The model is based on publications by Booth et al. (2024, https://doi.org/10.1007/s13253-023-00578-7; 2025, https://doi.org/10.7589/JWD-D-24-00079). Scripts are annotated and shared with an MIT license. For information about the SOP4CWD project, visit https://sop4cwd.org/.
+
+Additional documentation on this model can be found in the Warehouse Manual https://pages.github.coecis.cornell.edu/CWHL/CWD-Data-Warehouse/sample-size-quotas.html and on the SOP4CWD project website https://sop4cwd.org/warehouse/models/StatisticalSampleQuotas/.
