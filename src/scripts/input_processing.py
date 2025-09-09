@@ -212,12 +212,7 @@ for sa in subadmin_areas:
 # Process Demography
 # Demography is either a provided file (json) or a dict of values in the params file.
 # The model requires one or the other.
-
-if 'demography' in params and params['demography']: # a dict of demography values is provided
-  demographic_data = params['demography']
-  logging.info("Demography data loaded successfully from params file")
-  model_log_html(f"Demographic data: list of {params['demography_type']} values provided")
-elif "_demography" in params and params['_demography']: # a demography file is provided
+if "_demography" in params and params['_demography']: # a demography file is provided
   try:
     with open(demography_file_path, 'r') as f:
       demography = json.load(f)
@@ -233,6 +228,10 @@ elif "_demography" in params and params['_demography']: # a demography file is p
   params['demography_type'] = {demography['metric']}
   logging.info("Demography data loaded successfully from file")
   model_log_html(f"Demographic data: dataset from Warehouse ({demography['species']} {demography['metric']} for season-year {demography['season_year']})")
+elif 'demography' in params and params['demography']: # a dict of demography values is provided
+  demographic_data = params['demography']
+  logging.info("Demography data loaded successfully from params file")
+  model_log_html(f"Demographic data: list of {params['demography_type']} values provided")
 else:
   # The demography data cannot be found. Exit with an error immediately.
   logging.error("Demography data not provided.")
